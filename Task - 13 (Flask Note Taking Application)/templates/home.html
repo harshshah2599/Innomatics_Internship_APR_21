@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Note Taking App</title>
+</head>
+
+   <body bgcolor="#f5f5dc">
+
+       <h2>Note It Down!!</h2>
+       <form action="{{ url_for('add_note')}}" method="post">
+        <input type="text" name="note" placeholder="Enter your note here..">
+
+        <button>Add Note</button>
+
+   </form>
+
+ <ul style="color:darkslateblue">
+    {% for i in notes%}
+        <li>{{ i }}</li>
+    {% endfor %}
+    </ul>
+
+
+
+   </body>
+</html>
